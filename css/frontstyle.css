@@ -85,13 +85,13 @@ font-size: 20px;
 	text-align: center;
 	font-family: "微软雅黑";
 
-	
+
 }
 
 
 #zb{
 	float: left;
-	
+
 }
 
 
@@ -219,8 +219,8 @@ font-size: 20px;
 	font-size: 16px;
 	font-family: "微软雅黑";
 	color: rgba(146, 191, 226, 1);
-	
-	
+
+
 }
 
 #dingbu{
@@ -233,8 +233,8 @@ font-size: 20px;
     color: rgba(146, 191, 226, 1);
     font-size: 16px;
 /*	font-family: "微软雅黑";*/
-	
-	
+
+
 }
 
 .bgm {
@@ -250,7 +250,7 @@ font-size: 20px;
 	font-weight: bold;
 	font-size: 15px;
 	font-family: "微软雅黑";
-	
+
 }
 
 #lianjie {
@@ -259,7 +259,7 @@ font-size: 20px;
 	color: #f7f6f3;
 	font-size: 15px;
 	font-family: "微软雅黑";
-	
+
 }
 
 
@@ -271,7 +271,7 @@ font-size: 20px;
 	font-family: "微软雅黑";
 	font-weight: bold;
 	line-height: normal;
-	
+
 }
 
 #fenlei1{
@@ -282,7 +282,7 @@ font-size: 20px;
 	font-size: 16px;
 	font-family: "微软雅黑";
 	line-height: normal;
-	
+
 }
 
 
@@ -293,7 +293,7 @@ font-size: 20px;
 	font-size: 12px;
 	font-family: "微软雅黑";
 	line-height: normal;
-	
+
 }
 
 .liuyan{
@@ -302,7 +302,5 @@ font-size: 20px;
 	font-size: 20px;
 	font-family: "微软雅黑";
 	line-height: normal;
-	
+
 }
-
-
