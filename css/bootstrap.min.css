@@ -1033,7 +1033,7 @@ body {
 	color:#333;
 	background-color:#fff
 }
-button,input,select,textarea {
+,input,select,textarea {
 	font-family:"微软雅黑";
 	font-size:inherit;
 	line-height:inherit
@@ -2676,7 +2676,7 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 	background-color:#333
 }
 .btn-primary {
-	color: #F4F4F4;
+	color: #4f4f4f;
 	background-color: rgba(122, 173, 226, 0.55);
 	border-color: rgba(0,128,255,0.05)
 }
