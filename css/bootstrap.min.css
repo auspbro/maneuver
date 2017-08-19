@@ -2676,14 +2676,14 @@ select[multiple].form-group-lg .form-control,textarea.form-group-lg .form-contro
 	background-color:#333
 }
 .btn-primary {
-	color: #4f4f4f;
-	background-color: rgba(122, 173, 226, 0.55);
-	border-color: rgba(0,128,255,0.05)
+	color: #757575;
+	background-color: rgba(245, 244, 246,0.5);
+	border-color: rgba(245,244,246,0.5)
 }
 .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary {
-	color:#fff;
-	background-color:rgba(0,0,0,.5);
-	border-color:#204d74
+	color:#000;
+	background-color:rgba(245,245,245,0.7);
+	border-color:#E0E0E0
 }
 .btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary {
 	background-image:none
