@@ -141,24 +141,25 @@ width: 100%;
        <!--<input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，再点击下方相应按钮，即可检索。 " baiduSug="2"  value=" " >- ->
  </div>-->
 
-    <form action="http://www.baidu.com/s" method="get" target="_blank">
+    <form action="http://www.google.com/search" method="get" target="_blank">
       <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，再点击下方相应按钮，即可检索！ " baiduSug="2"  value="" >
     
 <br>
 
     <P><center>
-    <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary"/>
     <!--<input type="submit" value="谷歌镜像" id="google1" button type="button" class="btn btn-primary"/>-->
+    <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
     <input type="submit" value="知乎" id="zhihu" button type="button" class="btn btn-primary" />
+    <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
     <input type="submit" value="微信" id="weixin" button type="button" class="btn btn-primary" />
     <input type="submit" value="微博" id="weibo" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
-    <input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />
     <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary"/>
     <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
+    <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
+    <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
+    <!--<input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>-->
 
   </center></P>
 
@@ -497,15 +498,16 @@ width: 100%;
     var stianmao=document.getElementById("tianmao");
     var staobao=document.getElementById("taobao");
     var sWeixin=document.getElementById("weixin");
+    var sMovie=document.getElementById("movie");    
     var sZhihu=document.getElementById("zhihu");
     var sweibo=document.getElementById("weibo");
     var sdouban=document.getElementById("douban");
     var sgequ=document.getElementById("gequ");
-
-      var sWeixin3=document.getElementById("weixin3");
-       var stieba=document.getElementById("tieba");
-     var sditu=document.getElementById("ditu");
-     var swangpan=document.getElementById("wangpan");
+    var sWeixin3=document.getElementById("weixin3");
+    var stieba=document.getElementById("tieba");
+    var sditu=document.getElementById("ditu");
+    var spanci=document.getElementById("panci");    
+    var swangpan=document.getElementById("wangpan");
 
     //百度
     sBaidu.onclick=function(){
@@ -518,6 +520,7 @@ width: 100%;
       sInfor.name="q";
     };
 
+  
     //Google镜像  2017 年 2 月 11 日 更换
 
     $('#google1').click(function() {
@@ -583,6 +586,17 @@ width: 100%;
       };
     });
 
+      //疯狂影视
+   $('#movie').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("http://ifkdy.com/?q=" + query + "&p=1", "_blank");
+        return false;
+      
+     	};
+    });
+
+
     //豆瓣
     sdouban.onclick=function(){
       sAddress.action="https://www.douban.com/search?";
@@ -615,7 +629,7 @@ width: 100%;
  $('#panci').click(function() {
       var query = $('#search').val();
       if ( query ) {
-        window.open("http://www.panc.cc/s/" + query + "/td_0", "_blank");
+        window.open("http://www.panc.cc/s/" + query + "/td", "_blank");
         return false;
 
      	};
@@ -639,10 +653,21 @@ width: 100%;
      	};
     });
 
+//去转盘
+  $('#wangpan').click(function() {
+      var query = $('#search').val();
+      if ( query ) {
+        window.open("http://www.quzhuanpan.com/source/search.action?q=" + query + "&currentPage=1", "_blank");
+        return false;
+
+     	};
+    });
+
 
 
 
   </script>
+
 
 
 
