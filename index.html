@@ -131,7 +131,7 @@
     <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary"/>
     <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary"/>
     <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary"/>   
-    <input type="submit" value="GitHub" id="github" button type="button" class="btn btn-primary"/>
+    <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary"/>
     
     <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
     <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
@@ -275,7 +275,6 @@
 
 
      //改用网易云音乐检索 移动端检索出现异常
-
 //  $('#gequ').click(function() {
 //    var query = $('#search').val();
 //    if ( query ) {
@@ -317,14 +316,7 @@
      	};
     });
 
-    //github
-    sgithub.onclick=function(){
-      sAddress.action="https://github.com/search?";
-      //sInfor.type="author";
-      sInfor.name="q";
-    }
-
-
+   
     //胖次网，网盘资源检索
     //swangpan.onclick=function(){
       //sAddress.action="http://www.panc.cc/s";
