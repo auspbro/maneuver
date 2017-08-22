@@ -507,7 +507,7 @@
                     }
                 }
             },
-            5)
+            10)
         });
         H.listen("pick_word",
         function(O) {
@@ -756,7 +756,8 @@ var BaiduSuggestion = (function() {
             X = Z.sugSubmit;
             var Q = Z.fontColor ? Z.fontColor: "#000";
             var W = Z.fontSize ? Z.fontSize: "14px";
-            var P = Z.fontFamily ? Z.fontFamily: "微软雅黑";
+            //var P = Z.fontFamily ? Z.fontFamily: "微软雅黑";
+            var P = Z.fontFamily ? Z.fontFamily: "verdana";            
             var U = Z.bgcolorHI ? Z.bgcolorHI: "#36c";
             var R = Z.fontColorHI ? Z.fontColorHI: "#FFF";
             var Y = Z.borderColor ? Z.borderColor: "#817f82";
