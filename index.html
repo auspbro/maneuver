@@ -10,15 +10,14 @@
 
 <link rel="shortcut icon" href="./favicon.ico">
 
-<meta name="Keywords" content="Capt,导航,Ciocle,"/>
-<meta name="Description" content="个人常用的导航页，随时随地 Ciocle。一个框，全能搜！如打开缓慢，请访问简洁版 http://so.byr.wiki/"/>
+<meta name="Keywords" content="Capt,auspbro,导航,Ciocle,"/>
+<meta name="Description" content="方便自己，随时随地 Ciocle。一个框，高效检索！"/>
 
 
 <!--
 	作者：auspbro@gmail.com
-	时间：2016-12-15
-	描述：为了提升访问速度，改为访问放在阿里云服务器里的样式文件，实际上源代码和本地一样。如果想要更换为本地的路径，可使用搜索替换功能，把 http://byr.zhangxingqiu.cn/ 替换为 ./ 即可。
-
+	时间：2017-08-15
+	描述：为了提升国内访问速度，改为访问放在阿里云服务器里的样式文件，实际上源代码和本地一样。如果想要更换为本地的路径，可使用搜索替换功能，把 http://byr.zhangxingqiu.cn/ 替换为 ./ 即可。
 
 <link href="http://yun.zhangxingqiu.cn/css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="http://yun.zhangxingqiu.cn/css/frontstyle.css">
@@ -27,43 +26,39 @@
 
 -->
 
-
-<!--本地的样式文件
-
--->
-
+<!--本地的样式文件-->
 <link href="./css/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="./css/frontstyle.css">
+
+<!-- jQuery -->
 <script src="./assets/js/jquery-3.1.0.min.js"></script>
 <script src="./assets/js/jquery-migrate-3.0.0.min.js"></script>
 
-
-
+</head>
 
 <style type="text/css">
-body  {
-/*
-background-image:url(http://yun.zhangxingqiu.cn/images/byrbg.jpg);
-*/
+ body, html {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-	/*作者：auspbro@gmail.com
-	时间：2016-10-05
-	描述：这是本地测试的背景照路径*/
+    margin: 0;
+    padding: 0;
+  }
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
 
- /* background-image:url(images/background.jpg); */
+    z-index: -100;
+  }
 
-z-index: -1;
-background-repeat:no-repeat;
-background-attachment:fixed;
-background-size: cover;
-height: 100%;
-width: 100%;
-}
 
 </style>
 
 </head>
-
 
 <body>
 
@@ -72,16 +67,17 @@ width: 100%;
 <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-18
-	描述：原来的蓝色背景顶部导航
+	描述：顶部导航
 -->
+
 <!--
 <div class="hidden-xs">
  <ul class="nav nav-tabs navbar-static-top"  role="navigation" >
 
   <div id="header">
 
-   <!-- <a href="http://byr.wiki" id="zb" style="font-size: 19px;">北邮人导航</a>- ->
-   <!-- <a class="LOGO1" href="http://byr.wiki"><img id="zb" src="http://yun.zhangxingqiu.cn/images/logo7.png"  alt="北邮人导航"></a> - ->
+   <!-- <a href="http://byr.wiki" id="zb" style="font-size: 19px;">我的导航</a>- ->
+   <!-- <a class="LOGO1" href="http://byr.wiki"><img id="zb" src="http://yun.zhangxingqiu.cn/images/logo7.png"  alt="我的导航"></a> - ->
     <a href="https://auspbro.github.io/maneuver/" target="_blank" class="zb"  >Ciocle</a>
 
     <a href="http://byr.wiki/liuyan.html" target="_blank" class="yb "  >...</a>
@@ -100,50 +96,28 @@ width: 100%;
 -->
 
 <div class="container">
-  <!--
-  	作者：auspbro@gmail.com
-  	时间：2016-10-20
-  	描述：仅在屏幕尺寸小于 768px 可见
-  -->
+  <div class="row LOGO">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+    
+      <a href="./index.html"><img id="LOGO" src="images/zen.png" width="30" height="30"  alt="Responsive image"></a>
 
-  <div class="visible-xs">
-    <div class="row sLOGO">
-      <div class="col-xs-6 col-xs-offset-3">
-
-         <a href="./index.html"><img id="LOGO" src="http://yun.zhangxingqiu.cn/images/logo7.png"  alt="Responsive image"></a>
-       <br/>
-      </div>
     </div>
   </div>
+</div>
 
+  <p></p>
 
-
-  <!--
-  	作者：auspbro@gmail.com
-  	时间：2016-10-20
-  	描述：仅在屏幕尺寸大于 768px 可见
-  -->
-
-  <div class="hidden-xs">
-    <div class="row LOGO">
-      <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
-        <!--<a href="./index.html"><img id="LOGO" src="http://yun.zhangxingqiu.cn/images/logo.svg"  alt="Responsive image"></a>-->
-
-        <a href="./index.html"><img id="LOGO" src="images/zen.png" width="30" height="30"  alt="Responsive image"></a>
-
-      </div>
-    </div>
-  </div>
-<br>
   <!--<div class="input-group input-group-lg">
  	   <!--<span class="input-group-addon">Ciocle</span>- ->
     <form action="http://www.baidu.com/s" method="get" target="_blank">
        <!--<input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，再点击下方相应按钮，即可检索。 " baiduSug="2"  value=" " >- ->
  </div>-->
-
-    <form action="http://www.google.com/search" method="get" target="_blank">
-      <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，再点击下方相应按钮，即可检索！ " baiduSug="2"  value="" >
-    
+<div>
+  <P><center>
+    <form action="http://www.baidu.com/s" method="get" target="_blank">
+      <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词，再点击下方相应按钮，即可检索！ " value="" baiduSug="2">
+    </center></P>
+    </div>
 <br>
 
     <P><center>
@@ -156,7 +130,9 @@ width: 100%;
     <input type="submit" value="微博" id="weibo" button type="button" class="btn btn-primary"/>
     <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary"/>
     <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary"/>    
+    <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary"/>   
+    <input type="submit" value="GitHub" id="github" button type="button" class="btn btn-primary"/>
+    
     <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
     <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
     <!--<input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>-->
@@ -194,6 +170,7 @@ width: 100%;
     var stieba=document.getElementById("tieba");
     var sditu=document.getElementById("ditu");
     var spanci=document.getElementById("panci");
+    var sgithub=document.getElementById("github");
 
     //百度
     sBaidu.onclick=function(){
@@ -322,21 +299,13 @@ width: 100%;
     });
 
 
-    //论坛内容
-    sWeixin3.onclick=function(){
-      sAddress.action="http://search.icybee.cn/bbs/";
-      sInfor.name="key";
-    }
+ //github
+ sgithub.onclick=function(){
+  sAddress.action="https://github.com/search?";
+  //sInfor.type="author";
+  sInfor.name="q";
+}
 
-
- $('#ditu').click(function() {
-      var query = $('#search').val();
-      if ( query ) {
-        window.open("http://ditu.amap.com/search?query=" + query + " ", "_blank");
-        return false;
-
-     	};
-    });
 
 //去转盘
   $('#wangpan').click(function() {
