@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
 
   <title>Ciocle</title>
 
-<link rel="shortcut icon" href="./favicon.ico">
+  <link rel="shortcut icon" href="./favicon.ico">
 
-<meta name="Keywords" content="Capt,auspbro,导航,Ciocle,"/>
-<meta name="Description" content="方便自己，随时随地 Ciocle。一个框，高效检索！"/>
+  <meta name="Keywords" content="Capt,auspbro,导航,Ciocle," />
+  <meta name="Description" content="方便自己，随时随地 Ciocle。一个框，高效检索！" />
 
 
-<!--
+  <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-15
 	描述：为了提升国内访问速度，改为访问放在阿里云服务器里的样式文件，实际上源代码和本地一样。如果想要更换为本地的路径，可使用搜索替换功能，把 http://byr.zhangxingqiu.cn/ 替换为 ./ 即可。
@@ -26,18 +27,19 @@
 
 -->
 
-<!--本地的样式文件-->
-<link href="./css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="./css/frontstyle.css">
+  <!--本地的样式文件-->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/frontstyle.css">
 
-<!-- jQuery -->
-<script src="./assets/js/jquery-3.1.0.min.js"></script>
-<script src="./assets/js/jquery-migrate-3.0.0.min.js"></script>
+  <!-- jQuery -->
+  <script src="./assets/js/jquery-3.1.0.min.js"></script>
+  <script src="./assets/js/jquery-migrate-3.0.0.min.js"></script>
 
 </head>
 
 <style type="text/css">
- body, html {
+  body,
+  html {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -47,6 +49,7 @@
     margin: 0;
     padding: 0;
   }
+
   #background {
     position: fixed;
     top: 0;
@@ -54,8 +57,6 @@
 
     z-index: -100;
   }
-
-
 </style>
 
 </head>
@@ -64,13 +65,13 @@
 
 
 
-<!--
+  <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-18
 	描述：顶部导航
 -->
 
-<!--
+  <!--
 <div class="hidden-xs">
  <ul class="nav nav-tabs navbar-static-top"  role="navigation" >
 
@@ -89,54 +90,60 @@
 -->
 
 
-<!--
+  <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-18
 	描述：主体部分内容
 -->
 
-<div class="container">
-  <div class="row LOGO">
-    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
-      <P><center>
-      <a href="./index.html"><img id="LOGO" src="images/zen.png" width="35" height="35"  alt="Responsive image"></a>
-    </center></P>
+  <div class="container">
+    <div class="row LOGO">
+      <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+        <P>
+          <center>
+            <a href="./index.html"><img id="LOGO" src="images/zen.png" width="35" height="35"  alt="Responsive image"></a>
+          </center>
+        </P>
+      </div>
     </div>
   </div>
-</div>
 
 
-<div>
-  <P><center>
-    <form action="http://www.baidu.com/s" method="get" target="_blank">
-      <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词点击下方按钮即可检索！ " value="" baiduSug="2">
-    </center></P>
-    </div>
+  <div>
+    <P>
+      <center>
+        <form action="http://www.baidu.com/s" method="get" target="_blank">
+          <input type="text" class="form-control" name="search" id="search" placeholder="输入关键词点击下方按钮即可检索！ " value="" baiduSug="2">
+      </center>
+    </P>
+  </div>
 
 
-    <P><center>
-    <!--<input type="submit" value="谷歌镜像" id="google1" button type="button" class="btn btn-primary"/>-->
-    <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
-    <input type="submit" value="知乎" id="zhihu" button type="button" class="btn btn-primary" />
-    <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
-    <input type="submit" value="微信" id="weixin" button type="button" class="btn btn-primary" />
-    <input type="submit" value="微博" id="weibo" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary"/>
-    <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary"/>   
-    <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary"/>
-    <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
-    <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
-    <!--<input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>-->
-    </center></P>
+  <P>
+    <center>
+      <!--<input type="submit" value="谷歌镜像" id="google1" button type="button" class="btn btn-primary"/>-->
+      <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary" />
+      <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
+      <input type="submit" value="知乎" id="zhihu" button type="button" class="btn btn-primary" />
+      <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
+      <input type="submit" value="微信" id="weixin" button type="button" class="btn btn-primary" />
+      <input type="submit" value="微博" id="weibo" button type="button" class="btn btn-primary" />
+      <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary" />
+      <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary" />
+      <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary" />
+      <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary" />
+      <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
+      <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
+      <!--<input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>-->
+    </center>
+  </P>
 
-    </form>
+  </form>
 
-</div>
+  </div>
 
 
-<!--
+  <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-20
 	描述：搜索完整代码
@@ -145,42 +152,43 @@
 
 
   <script>
-    var sAddress=document.getElementsByTagName("form")[0];
-    var sInfor=document.getElementById("search");
-    var sBaidu=document.getElementById("baidu");
-    var sGoogle=document.getElementById("google");
-    var sGoogle1=document.getElementById("google1");
-    var sjd=document.getElementById("jd");
-    var stianmao=document.getElementById("tianmao");
-    var staobao=document.getElementById("taobao");
-    var sWeixin=document.getElementById("weixin");
-    var sMovie=document.getElementById("movie");    
-    var sZhihu=document.getElementById("zhihu");
-    var sweibo=document.getElementById("weibo");
-    var sdouban=document.getElementById("douban");
-    var sgequ=document.getElementById("gequ");
-    var sWeixin3=document.getElementById("weixin3");
-    var stieba=document.getElementById("tieba");
-    var sditu=document.getElementById("ditu");
-    var spanci=document.getElementById("panci");
-    var sgithub=document.getElementById("github");
+    var sAddress = document.getElementsByTagName("form")[0];
+    var sInfor = document.getElementById("search");
+    var sBaidu = document.getElementById("baidu");
+    var sGoogle = document.getElementById("google");
+    var sGoogle1 = document.getElementById("google1");
+    var sjd = document.getElementById("jd");
+    var stianmao = document.getElementById("tianmao");
+    var staobao = document.getElementById("taobao");
+    var sWeixin = document.getElementById("weixin");
+    var sMovie = document.getElementById("movie");
+    var sZhihu = document.getElementById("zhihu");
+    var sweibo = document.getElementById("weibo");
+    var sdouban = document.getElementById("douban");
+    var sgequ = document.getElementById("gequ");
+    var sWeixin3 = document.getElementById("weixin3");
+    var stieba = document.getElementById("tieba");
+    var sditu = document.getElementById("ditu");
+    var spanci = document.getElementById("panci");
+    var sgithub = document.getElementById("github");
 
     //百度
-    sBaidu.onclick=function(){
-      sAddress.action="https://www.baidu.com/s";
-      sInfor.name="wd";
+    sBaidu.onclick = function () {
+      sAddress.action = "https://www.baidu.com/s";
+      sInfor.name = "wd";
     }
     //Google
-    sGoogle.onclick=function(){
-      sAddress.action="http://www.google.com/search";
-      sInfor.name="q";
+    sGoogle.onclick = function () {
+      sAddress.action = "http://www.google.com/search";
+      sInfor.name = "q";
     };
 
-  
+
     //Google镜像  2017 年 2 月 11 日 更换
-    $('#google1').click(function() {
+    $('#google1').click(function () {
       var query = $('#search').val();
-      if ( query ) {        window.open("http://google.hbspy.moe/#q=" + query , "_blank");
+      if (query) {
+        window.open("http://google.hbspy.moe/#q=" + query, "_blank");
         return false;
 
       };
@@ -188,9 +196,9 @@
 
 
     //京东（已修复）在移动端访问会跳出两次窗口（已修复）
-    $('#jd').click(function() {
+    $('#jd').click(function () {
       var query = $('#search').val();
-      if ( query ) {
+      if (query) {
         window.open("http://search.jd.com/Search?enc=utf-8&keyword=" + query, "_blank");
         return false;
       };
@@ -198,22 +206,22 @@
 
 
     //天猫  搜索需求下 暂时下架
-//  stianmao.onclick=function(){
-//    sAddress.action="https://list.tmall.com/search_product.htm?";
-//    sInfor.name="q";
-//    //sInfor.type="enc=utf-8";
-//  }
+    //  stianmao.onclick=function(){
+    //    sAddress.action="https://list.tmall.com/search_product.htm?";
+    //    sInfor.name="q";
+    //    //sInfor.type="enc=utf-8";
+    //  }
 
     //淘宝
-    staobao.onclick=function(){
-      sAddress.action="https://s.taobao.com/search?";
-      sInfor.name="q";
+    staobao.onclick = function () {
+      sAddress.action = "https://s.taobao.com/search?";
+      sInfor.name = "q";
     }
 
-      //微信  恢复上线
-     $('#weixin').click(function() {
+    //微信  恢复上线
+    $('#weixin').click(function () {
       var query = $('#search').val();
-      if ( query ) {
+      if (query) {
         window.open("http://weixin.sogou.com/weixin?type=2&query=" + query + "&ie=utf8", "_blank");
         return false;
 
@@ -221,71 +229,71 @@
     });
 
     //知乎
-    sZhihu.onclick=function(){
-      sAddress.action="https://www.zhihu.com/search";
-      sInfor.name="q";
-      sInfor.type="question";
+    sZhihu.onclick = function () {
+      sAddress.action = "https://www.zhihu.com/search";
+      sInfor.name = "q";
+      sInfor.type = "question";
     }
-//    //微博 （检索异常）
-//    sweibo.onclick=function(){
-//      sAddress.action="http://s.weibo.com/weibo/?";
-//      //sInfor.name="q";
-//      //sInfor.type="question";
-//    }
-    $('#weibo').click(function() {
+    //    //微博 （检索异常）
+    //    sweibo.onclick=function(){
+    //      sAddress.action="http://s.weibo.com/weibo/?";
+    //      //sInfor.name="q";
+    //      //sInfor.type="question";
+    //    }
+    $('#weibo').click(function () {
       var query = $('#search').val();
-      if ( query ) {
+      if (query) {
         window.open("http://s.weibo.com/weibo/" + query, "_blank");
         return false;
       };
     });
 
-      //疯狂影视
-   $('#movie').click(function() {
+    //疯狂影视
+    $('#movie').click(function () {
       var query = $('#search').val();
-      if ( query ) {
+      if (query) {
         window.open("http://ifkdy.com/?q=" + query + "&p=1", "_blank");
         return false;
-      
-     	};
+
+      };
     });
 
 
     //豆瓣
-    sdouban.onclick=function(){
-      sAddress.action="https://www.douban.com/search?";
-      sInfor.name="q";
+    sdouban.onclick = function () {
+      sAddress.action = "https://www.douban.com/search?";
+      sInfor.name = "q";
       //sInfor.type="question";
     }
 
-     //改用网易云音乐检索 移动端检索出现异常
-//  $('#gequ').click(function() {
-//    var query = $('#search').val();
-//    if ( query ) {
-//      window.open("http://music.163.com/#/search/m/?s=" + query + "&type=1", "_blank");
-//      return false;
-//
-//   	};
-//  });
+    //改用网易云音乐检索 移动端检索出现异常
+    //  $('#gequ').click(function() {
+    //    var query = $('#search').val();
+    //    if ( query ) {
+    //      window.open("http://music.163.com/#/search/m/?s=" + query + "&type=1", "_blank");
+    //      return false;
+    //
+    //   	};
+    //  });
 
 
-// 胖次  另一个检索入口
- $('#panci').click(function() {
+    // 胖次  另一个检索入口
+    $('#panci').click(function () {
       var query = $('#search').val();
-      if ( query ) {
+      if (query) {
         window.open("http://www.panc.cc/s/" + query + "/td_0", "_blank");
         return false;
-      
-     	};
+
+      };
     });
 
 
- //github
- sgithub.onclick=function(){
-  sAddress.action="https://github.com/search?";
-  //sInfor.type="author";
-  sInfor.name="q";
-}
+    //github
+    sgithub.onclick = function () {
+      sAddress.action = "https://github.com/search?";
+      //sInfor.type="author";
+      sInfor.name = "q";
+    }
 
 
 //去转盘
@@ -297,8 +305,6 @@
 //
 //     	};
 //    });
-
-
   </script>
 
 </body>
@@ -306,13 +312,15 @@
 
 <!--谷歌统计代码 -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-105087262-1', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-105087262-1', 'auto');
+      ga('send', 'pageview');
 
 </script>
 
