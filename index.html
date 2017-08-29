@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="http://yun.zhangxingqiu.cn/css/frontstyle.css">
 <script src="http://yun.zhangxingqiu.cn/assets/js/jquery-3.1.0.min.js"></script>
 <script src="http://yun.zhangxingqiu.cn/assets/js/jquery-migrate-3.0.0.min.js"></script>··
-
+c
 -->
 
   <!--本地的样式文件-->
@@ -123,9 +123,8 @@
 
   <P>
     <center>
-      <!--<input type="submit" value="谷歌镜像" id="google1" button type="button" class="btn btn-primary"/>-->
-      <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary" />
       <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
+      <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary" />
       <input type="submit" value="知乎" id="zhihu" button type="button" class="btn btn-primary" />
       <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
       <input type="submit" value="微信" id="weixin" button type="button" class="btn btn-primary" />
@@ -133,10 +132,7 @@
       <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary" />
       <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary" />
       <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary" />
-      <input type="submit" value="GitHub" id="github" button type="button" class="btn btn-primary" />
-      <!--<input type="submit" value="京东" id="jd" button type="button" class="btn btn-primary" />-->
-      <!--<input type="submit" value="音乐" id="gequ" button type="button" class="btn btn-primary"/>-->
-      <!--<input type="submit" value="地图" id="ditu" button type="button" class="btn btn-primary"/>-->
+      <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary" />
     </center>
   </P>
 
@@ -151,26 +147,18 @@
 	描述：搜索完整代码
 -->
   <script charset="gbk" src="assets/js/baidu.js"></script>
-
+<script></script>
 
   <script>
     var sAddress = document.getElementsByTagName("form")[0];
     var sInfor = document.getElementById("search");
     var sBaidu = document.getElementById("baidu");
     var sGoogle = document.getElementById("google");
-    var sGoogle1 = document.getElementById("google1");
-    var sjd = document.getElementById("jd");
-    var stianmao = document.getElementById("tianmao");
     var staobao = document.getElementById("taobao");
-    var sWeixin = document.getElementById("weixin");
-    var sMovie = document.getElementById("movie");
     var sZhihu = document.getElementById("zhihu");
     var sweibo = document.getElementById("weibo");
     var sdouban = document.getElementById("douban");
-    var sgequ = document.getElementById("gequ");
-    var sWeixin3 = document.getElementById("weixin3");
-    var stieba = document.getElementById("tieba");
-    var sditu = document.getElementById("ditu");
+    var sWeixin = document.getElementById("weixin");
     var spanci = document.getElementById("panci");
     var sgithub = document.getElementById("github");
 
@@ -179,32 +167,31 @@
       sAddress.action = "https://www.baidu.com/s";
       sInfor.name = "wd";
     }
+
     //Google
     sGoogle.onclick = function () {
       sAddress.action = "http://www.google.com/search";
       sInfor.name = "q";
     };
 
-
     //Google镜像  2017 年 2 月 11 日 更换
-    $('#google1').click(function () {
-      var query = $('#search').val();
-      if (query) {
-        window.open("http://google.hbspy.moe/#q=" + query, "_blank");
-        return false;
-
-      };
-    });
+   // $('#google1').click(function () {
+   //   var query = $('#search').val();
+   //   if (query) {
+   //     window.open("http://google.hbspy.moe/#q=" + query, "_blank");
+   //     return false;
+   //   };
+   // });
 
 
     //京东（已修复）在移动端访问会跳出两次窗口（已修复）
-    $('#jd').click(function () {
-      var query = $('#search').val();
-      if (query) {
-        window.open("http://search.jd.com/Search?enc=utf-8&keyword=" + query, "_blank");
-        return false;
-      };
-    });
+//    $('#jd').click(function () {
+//      var query = $('#search').val();
+//      if (query) {
+//        window.open("http://search.jd.com/Search?enc=utf-8&keyword=" + query, "_blank");
+//        return false;
+//      };
+//    });
 
 
     //天猫  搜索需求下 暂时下架
@@ -220,7 +207,7 @@
       sInfor.name = "q";
     }
 
-    //微信  恢复上线
+    //微信
     $('#weixin').click(function () {
       var query = $('#search').val();
       if (query) {
@@ -236,12 +223,8 @@
       sInfor.name = "q";
       sInfor.type = "question";
     }
-    //    //微博 （检索异常）
-    //    sweibo.onclick=function(){
-    //      sAddress.action="http://s.weibo.com/weibo/?";
-    //      //sInfor.name="q";
-    //      //sInfor.type="question";
-    //    }
+
+    //微博
     $('#weibo').click(function () {
       var query = $('#search').val();
       if (query) {
@@ -260,7 +243,6 @@
       };
     });
 
-
     //豆瓣
     sdouban.onclick = function () {
       sAddress.action = "https://www.douban.com/search?";
@@ -277,7 +259,6 @@
     //
     //   	};
     //  });
-
 
     // 胖次  另一个检索入口
     $('#panci').click(function () {
