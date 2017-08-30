@@ -15,25 +15,13 @@
   <meta name="Description" content="方便自己，方便他人。随时随地 Ciocle。一个框，高效检索！" />
 
 
-  <!--
-	作者：auspbro@gmail.com
-	时间：2017-08-15
-	描述：为了提升国内访问速度，改为访问放在阿里云服务器里的样式文件，实际上源代码和本地一样。如果想要更换为本地的路径，可使用搜索替换功能，把 http://byr.zhangxingqiu.cn/ 替换为 ./ 即可。
-
-<link href="http://yun.zhangxingqiu.cn/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="http://yun.zhangxingqiu.cn/css/frontstyle.css">
-<script src="http://yun.zhangxingqiu.cn/assets/js/jquery-3.1.0.min.js"></script>
-<script src="http://yun.zhangxingqiu.cn/assets/js/jquery-migrate-3.0.0.min.js"></script>··
-c
--->
-
   <!--本地的样式文件-->
-  <!-- <link href="./css/bootstrap.min.css" rel="stylesheet" /> -->
-  <!-- <link rel="stylesheet" href="./css/frontstyle.css"> -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="./css/frontstyle.css">
 
   <!-- full page scrol sytle -->
   <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="./css/examples.css" />
+  <link rel="stylesheet" type="text/css" href="./css/examples.css" />
 
 
   <!-- jQuery -->
@@ -41,54 +29,196 @@ c
   <!-- <script src="./assets/js/jquery-migrate-3.0.0.min.js"></script> -->
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
+  <script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
 
-	<script type="text/javascript" src="./assets/js/jquery.fullPage.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-				menu: '#menu',
-				scrollingSpeed: 1000
-			});
+  <script type="text/javascript" src="./assets/js/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
 
-		});
-	</script>
+      function initialization() {
+        $('#myContainer').fullpage({
+          sectionsColor: ['whitesmoke', '#7BAABE', '#4BBFC3', '#4A6FB1', '#ccddff'],
+          anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+          resize: false,
+          animateAnchor: false,
+          scrollOverflow: true,
+          autoScrolling: true,
+          responsive: 900,
+          fitSection: false,
+          menu: '#menu',
+          navigation: true,
+          continuousVertical: true,
+          paddingTop: '20px',
+          css3: true,
+          onLeave: function (index, nextIndex, direction) {
+            console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
+          },
+          afterLoad: function (anchorLink, index) {
+            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
+          },
+          afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+            console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+          },
+          onSlideLeave: function (anchorLink, index, slideIndex, direction) {
+            console.log("onSlideLeave--" + "anchorLink: " + anchorLink + " index: " + index + " slideIndex: " + slideIndex + " direction: " + direction);
+          },
+          afterRender: function () {
+            console.log("afterRender");
+          },
+          afterResize: function () {
+            console.log("afterResize");
+          }
+        });
+      }
 
-</head>
+      //fullPage.js initialization
+      initialization();
 
-<style type="text/css">
-  body,
-  html {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 
-    margin: 0;
-    padding: 0;
-  }
+      $('#moveSectionUp').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSectionUp();
+      });
 
-  #background {
-    position: fixed;
-    top: 0;
-    left: 0;
+      $('#moveSectionDown').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSectionDown();
+      });
 
-    z-index: -100;
-  }
-</style>
+      $('#moveTo').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveTo(2, 3);
+      });
+
+      $('#silentMoveTo').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.silentMoveTo(2);
+      });
+
+      $('#silentMoveToSlide').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.silentMoveTo(2, 3);
+      });
+
+      $('#moveSlideRight').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSlideRight();
+      });
+
+      $('#moveSlideLeft').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.moveSlideLeft();
+      });
+
+      $('#setAutoScrollingFalse').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setAutoScrolling(false);
+      });
+
+      $('#setAutoScrollingTrue').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setAutoScrolling(true);
+      });
+
+      $('#setAllowScrollingFalse').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setAllowScrolling(false);
+      });
+
+      $('#setAllowScrollingTrue').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setAllowScrolling(true);
+      });
+
+      $('#setKeyboardScrollingFalse').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setKeyboardScrolling(false);
+      });
+
+      $('#setKeyboardScrollingTrue').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setKeyboardScrolling(true);
+      });
+
+      $('#setScrollingSpeed1500').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setScrollingSpeed(2500);
+      });
+
+      $('#setScrollingSpeed700').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.setScrollingSpeed(700);
+      });
+
+      $('#destroy').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.destroy('all');
+      });
+
+      $('#undestroy').click(function (e) {
+        e.preventDefault();
+
+        //fullPage.js initialization
+        initialization();
+      });
+
+      $('#reBuild').click(function (e) {
+        e.preventDefault();
+        $.fn.fullpage.reBuild();
+      });
+
+      $('#setLockAnchorsTrue').click(function (e) {
+        e.preventDefault;
+        $.fn.fullpage.setLockAnchors(true);
+      });
+
+      $('#setLockAnchorsFalse').click(function (e) {
+        e.preventDefault;
+        $.fn.fullpage.setLockAnchors(false);
+      });
+    });
+  </script>
+
+  <style>
+    #actions {
+      position: fixed;
+      top: 73px;
+      left: 30px;
+      z-index: 99999;
+    }
+
+    #actions a {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 7px;
+      margin: 2px;
+      color: #ccc;
+      display: inline-block;
+    }
+
+    #actions a:hover {
+      color: #fff;
+      background: #81A140;
+    }
+    /* Overwriting styles for control arrows for slides
+  * --------------------------------------- */
+
+    .fp-controlArrow.fp-prev {
+      left: 50px;
+    }
+
+    .fp-controlArrow.fp-next {
+      right: 50px;
+    }
+  </style>
 
 </head>
 
 <body>
 
-
-  <select id="demosMenu">
+  <!-- <select id="demosMenu">
     <option selected>Choose Demo</option>
     <option id="activeSlide">Active section and slide</option>
     <option id="apple">Apple iPhone demo (animations)</option>
@@ -128,20 +258,118 @@ c
     <option id="scrollOverflowReset">ScrollOverflow Reset</option>
     <option id="lazyLoad">Lazy load</option>
     <option id="scrollingSpeed">Scrolling speed</option>
-  </select>
+  </select> -->
   
+
+  <!-- <div id="actions">
+    <a id="moveSectionUp" href="#">moveSectionUp</a>
+    <a id="moveSectionDown" href="#">moveSectionDown</a>
+    <a id="silentMoveTo" href="#">silentMoveTo(2)</a>
+    <a id="moveTo" href="#">moveTo(2,3)</a>
+    <a id="silentMoveToSlide" href="#">silentMoveTo(2,3)</a>
+    <a id="moveSlideRight" href="#">moveSlideRight</a>
+    <a id="moveSlideLeft" href="#">moveSlideLeft</a>
+    <a id="setAutoScrollingTrue" href="#">setAutoScrolling(true)</a>
+    <a id="setAutoScrollingFalse" href="#">setAutoScrolling(false)</a>
+    <a id="setAllowScrollingTrue" href="#">setAllowScrolling(true)</a>
+    <a id="setAllowScrollingFalse" href="#">setAllowScrolling(false)</a>
+    <a id="setKeyboardScrollingTrue" href="#">setKeyboardScrolling(true)</a>
+    <a id="setKeyboardScrollingFalse" href="#">setKeyboardScrolling(false)</a>
+    <a id="setScrollingSpeed1500" href="#">setScrollingSpeed(1500)</a>
+    <a id="setScrollingSpeed700" href="#">setScrollingSpeed(700)</a>
+    <a id="destroy" href="#">destroy('all')</a>
+    <a id="undestroy" href="#">undestroy</a>
+    <a id="reBuild" href="#">reBuild</a>
+    <a id="setLockAnchorsTrue" href="#">setLockAnchors(true)</a>
+    <a id="setLockAnchorsFalse" href="#">setLockAnchors(false)</a>
+  </div> -->
+
+
   <ul id="menu">
     <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
     <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
     <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
   </ul>
-  
-  
-  <div id="fullpage">
-    <div class="section " id="section0">
+  <div id="myContainer">
 
-      <!-- <div class="container">
+    <div class="section" id="section0">
+      <div class="slide" id="slide1.1">
+
+        <div class="container">
+          <div class="row LOGO">
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+              <P>
+                <center>
+                  <a href="./index.html"><img id="LOGO" src="images/zen.png" width="35" height="35"  alt="Responsive image"></a>
+                </center>
+              </P>
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <P>
+            <center>
+              <form action="http://www.baidu.com/s" method="get" target="_blank">
+                <input type="text" class="form-control" name="search" id="search" value="" baiduSug="2">
+              </form>
+            </center>
+          </P>
+        </div>
+
+
+        <P>
+          <center>
+            <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
+            <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary" />
+            <input type="submit" value="知乎" id="zhihu" button type="button" class="btn btn-primary" />
+            <input type="submit" value="淘宝" id="taobao" button type="button" class="btn btn-primary" />
+            <input type="submit" value="微信" id="weixin" button type="button" class="btn btn-primary" />
+            <input type="submit" value="微博" id="weibo" button type="button" class="btn btn-primary" />
+            <input type="submit" value="豆瓣" id="douban" button type="button" class="btn btn-primary" />
+            <input type="submit" value="影视" id="movie" button type="button" class="btn btn-primary" />
+            <input type="submit" value="网盘" id="panci" button type="button" class="btn btn-primary" />
+            <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary" />
+          </center>
+        </P>
+
+
+
+      </div>
+      <div class="slide" id="slide1.2">
+        <h1>Slide 1.2</h1>
+      </div>
+      <div class="slide" id="slide1.3">
+        <h1>Slide 1.3</h1>
+      </div>
+    </div>
+    <div class="section" id="section1">
+      <div class="slide">
+        <h1>Section 2</h1>
+      </div>
+      <div class="slide">
+        <div class="wrap">
+          <h1>Slide 2.1</h1>
+        </div>
+      </div>
+      <div class="slide">
+        <h1>Slide 2.2</h1>
+      </div>
+      <div class="slide">
+        <h1>Slide 2.3</h1>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <h1>Section 3</h1>
+    </div>
+    <div class="section" id="section3">
+      <h1>Section 4</h1>
+    </div>
+  </div>
+
+  <!-- <div class="container">
         <div class="row LOGO">
           <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
             <P>
@@ -152,9 +380,9 @@ c
           </div>
         </div>
       </div> -->
-    
-    
-      <!-- <div>
+
+
+  <!-- <div>
         <P>
           <center>
             <form action="http://www.baidu.com/s" method="get" target="_blank">
@@ -164,8 +392,8 @@ c
         </P>
       </div>
      -->
-    
-      <!-- <P>
+
+  <!-- <P>
         <center>
           <input type="submit" value="百度" id="baidu" button type="button" class="btn btn-primary" />
           <input type="submit" value="谷歌" id="google" button type="button" class="btn btn-primary" />
@@ -179,75 +407,16 @@ c
           <input type="submit" value="源码" id="github" button type="button" class="btn btn-primary" />
         </center>
       </P> -->
-  
-      <h1>fullPage.js</h1>
-      <input type="hidden" name="id" value="1" />
-     <p>Create Beautiful Fullscreen Scrolling Websites</p>
-     <img src="imgs/fullPage.png" alt="fullPage" />
- 
-      </div>
-    
 
-    </div>
-    <div class="section active" id="section1">
-      <div class="slide">
-        <div class="intro">
-          <h1>Create Sliders</h1>
-          <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
-          <img src="imgs/slider.png" alt="slider" />
-        </div>
-  
-      </div>
-      <div class="slide">
-        <div class="intro">
-          <img src="imgs/1.png" alt="simple" />
-          <h1>Simple</h1>
-          <p>Easy to use. Configurable and customizable.</p>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="intro">
-          <img src="imgs/2.png" alt="Cool" />
-          <h1>Cool</h1>
-          <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="intro">
-          <img src="imgs/3.png" alt="Compatible" />
-          <h1>Compatible</h1>
-          <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="section2">
-      <div class="intro">
-        <h1>Example</h1>
-        <p>HTML markup example to define 4 sections.</p>
-        <img src="imgs/example2.png" alt="example" />
-      </div>
-    </div>
-    <div class="section" id="section3">
-      <div class="intro">
-        <h1>Working On Tablets</h1>
-        <p>
-          Designed to fit to different screen sizes as well as tablet and mobile devices.
-          <br /><br /><br /><br /><br /><br />
-        </p>
-      </div>
-      <img src="imgs/tablets.png" alt="tablets" />
-    </div>
-  </div>
-  
 
   <!--
 	作者：auspbro@gmail.com
 	时间：2017-08-20
 	描述：搜索完整代码
 -->
-  <script charset="gbk" src="assets/js/baidu.js"></script>
+  <!-- <script charset="gbk" src="assets/js/baidu.js"></script> -->
 
-  <script>
+  <!-- <script>
     var sAddress = document.getElementsByTagName("form")[0];
     var sInfor = document.getElementById("search");
     var sBaidu = document.getElementById("baidu");
@@ -342,22 +511,22 @@ c
     }
 
 
-  </script>
+  </script> -->
 
 </body>
 
 
 <!--谷歌统计代码 -->
 <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-105087262-1', 'auto');
-    ga('send', 'pageview');
+  ga('create', 'UA-105087262-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
