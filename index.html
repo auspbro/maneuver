@@ -427,7 +427,6 @@
               if (query) {
                 window.open("http://weixin.sogou.com/weixin?type=2&query=" + query + "&ie=utf8", "_blank");
                 return false;
-  
               };
             });
   
@@ -445,7 +444,7 @@
               sAddress.action = "https://www.douban.com/search?";
               sInfor.name = "q";
               //sInfor.type="question";
-            }
+            };
   
             //疯狂影视
             $('#movie').click(function () {
@@ -453,7 +452,6 @@
               if (query) {
                 window.open("http://ifkdy.com/?q=" + query + "&p=1", "_blank");
                 return false;
-  
               };
             });
   
@@ -463,10 +461,8 @@
               if (query) {
                 window.open("http://www.panc.cc/s/" + query + "/td_0", "_blank");
                 return false;
-  
               };
             });
-  
   
             //github
             sgithub.onclick = function () {
@@ -474,6 +470,7 @@
               //sInfor.type="author";
               sInfor.name = "q";
             }
+
           </script>
   
 
